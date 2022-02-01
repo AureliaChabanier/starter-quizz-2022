@@ -23,4 +23,9 @@ export class QuizListComponent implements OnInit {
   quizSelected(selected: boolean) {
     console.log('event received from child:', selected);
   }
+
+  deleteQuiz(selected: Quiz){
+    console.log('event received from child:', selected );
+    this.quizService.deleteQuiz(selected);
+  }
 }
